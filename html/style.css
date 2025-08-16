@@ -33,7 +33,7 @@ nav .menu li{
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-    margin: 0 25px;
+    margin: 5px 10px;
 }
 nav .menu li:hover{
     background: #f0f4ff;
@@ -93,8 +93,8 @@ img{
     position: relative;
     margin: 30px auto;
     max-width: 900px;
-    height: 600px;
-    width:60%;
+    aspect-ratio:3 / 2;
+    width:80%;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -144,13 +144,13 @@ img{
     /* margin:0 10px 0 10px; */
 }
 .pictures-btn {
-    width: 60px;
-    height: 60px;
+    width: 4vw;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.8);
     border: none;
     color: #2c3e50;
-    font-size: 1.8rem;
+    font-size: 3vw;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -336,4 +336,35 @@ img{
 }
 .content.active{
     display:block;
+}
+
+/* 响应式设计 */
+@media screen and (max-width:700px){
+    nav .menu{
+        align-items: center;
+        justify-content: center;
+    }
+    nav .menu li{
+        margin-top:15px;
+    }
+    .pictures-container{
+        width:90%;
+    }
+    .picture-content{
+        height:10px;
+    }
+    .picture-title{
+        font-size: 10px;
+        margin-bottom:5px;
+        margin-top: 0;
+    }
+    .indicator {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+    .pictures-indicators{
+        bottom:10px;
+    }
 }
