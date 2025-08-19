@@ -192,20 +192,43 @@ img{
     border:1px;
     margin:20px;
     padding:30px;
+        animation: fadeIn 0.6s ease forwards;
 }
 .Tuandui{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     border:1px;
     margin:20px;
     padding:30px;
+        animation: fadeIn 0.6s ease forwards;
+}
+.Zhengce{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border:1px;
+    margin:20px;
+    padding:30px;
+    animation: fadeIn 0.6s ease forwards;
 }
 /* 地图透明按钮 */
+.tips{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tips-content{
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+}
 .map-container{
     position: relative;
 }
 .map-container a{
     position: absolute;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: rgba(72, 255, 0, 0.2);
     cursor: pointer;
 }
 .map-container a:hover{
@@ -337,6 +360,53 @@ img{
 .content.active{
     display:block;
 }
+
+/* ZhengCe.html {*/
+.document-class{
+    display:flex;
+    justify-content: left;
+    background: #f8f9fa;
+    padding:15px;
+    color:black;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    margin:0;
+}
+.document-class li{
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color:#2c3e50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin: 2px 10px;
+    margin-bottom: 0;
+}
+.document-class li:hover{
+    background: rgb(255, 240, 240);
+    transform: translateY(3px);
+}
+.document-class li.active{
+    color:red;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+}
+.doc{
+    display: none;
+}
+.doc.active{
+    display:block;
+}
+
+/* } */
+
 
 /* 响应式设计 */
 @media screen and (max-width:700px){
