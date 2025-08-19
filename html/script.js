@@ -57,7 +57,7 @@ for(let i=0;i<btns.length;i++){
                 // targetContent.className += " active";
                 targetContent.classList.add('active');
             }
-            console.log("helloworld");
+            // console.log("helloworld");
             targetWindow.className += " show";
         }
     )
