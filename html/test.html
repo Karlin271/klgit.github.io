@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="Zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试霖泽科技弹窗</title>
+    <style>
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+        .content.active {
+            display: block;
+        }
+        .test-btn {
+            padding: 10px 20px;
+            margin: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>测试霖泽科技弹窗</h1>
+    
+    <button class="test-btn" onclick="showContent('linze')">显示霖泽科技</button>
+    <button class="test-btn" onclick="showContent('garden')">显示花卉科普馆</button>
+    
+    <div class="content active" id="garden">
+        <h2>"秘密花园"花卉科普馆</h2>
+        <p>这是花卉科普馆的内容</p>
+    </div>
+    
+    <div class="content" id="linze">
+        <h2>霖泽科技育苗基地</h2>
+        <p>霖泽科技是一家专注于农业科技创新的企业，致力于为现代农业提供智能化解决方案。</p>
+        <p>育苗基地配备了智能温控系统、自动灌溉设备、光照调节装置等先进设施。</p>
+        <img src="images/霖泽科技.jpg" alt="霖泽科技育苗基地" style="max-width: 300px;">
+    </div>
+    
+    <script>
+        function showContent(targetId) {
+            // 隐藏所有内容
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 显示目标内容
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+                console.log('显示内容:', targetId);
+            } else {
+                console.log('未找到内容:', targetId);
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -7,16 +7,88 @@ h1{
     margin: 0;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
+
+/* 团队logo行 */
+.team-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #e0f0e0;
+    border-bottom: 2px solid #7BC4B2;
+    min-height: 60px;
+}
+
+.logo-left {
+    display: flex;
+    align-items: center;
+}
+
+.team-icon {
+    height: 90px !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a4a1a;
+}
+
+.logo-text p {
+    margin: 2px 0 0 0;
+    font-size: 14px;
+    color: #4a7c4a;
+    font-style: italic;
+}
+
+
+
+/* 小标题薄荷绿色背景 */
+h3, h4 {
+    background: #7BC4B2 !important;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 6px;
+    margin: 15px 0 10px 0;
+}
+
+h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 /* 导航栏 */
+nav {
+    background: #7BC4B2 !important;
+    padding: 15px;
+    color: #f8f9fa;
+    border-bottom: 1px solid #5BA892;
+}
+
 nav ul{
     display:flex;
     justify-content: left;
-    background: #f8f9fa;
-    padding:15px;
+    background: transparent;
+    padding: 0;
     color:#f8f9fa;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: none;
     flex-wrap: wrap;
+    margin: 0;
 }
+
 nav .menu li a{
     text-decoration: none;
 }
@@ -223,6 +295,13 @@ img{
     font-size: 20px;
     font-weight: 800;
 }
+/* 地图图片样式 */
+.map {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .map-container{
     position: relative;
 }
@@ -282,6 +361,13 @@ img{
     width: 5.76%;
     height: 1.75%;
 }
+
+.mbtn-9 {
+    left: 30.70%;
+    top: 81.00%;
+    width: 6.50%;
+    height: 1.80%;
+}
 /* 弹窗 */
 .window-container {
     position: fixed;
@@ -308,7 +394,8 @@ img{
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     width: 90%;
     max-width: 600px;
-    overflow: hidden;
+    max-height: 80vh;
+    overflow-y: auto;
     transform: translateY(50px);
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
@@ -343,6 +430,7 @@ img{
 .content-container{
     margin-top:20px;
     width:100%;
+    min-height: 300px;
 }
 .content{
     background: white;
@@ -407,6 +495,73 @@ img{
 
 /* } */
 
+/* 村名图片样式 */
+.village-name-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.village-name-img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 花卉图片样式 */
+.flower-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.flower-img {
+    max-width: 25%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 红色资源图片样式 */
+.red-resource-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.red-resource-img {
+    max-width: 25%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 团队介绍页面布局 */
+.team-text {
+    margin: 20px;
+    line-height: 1.8;
+}
+
+.team-text .paragraph {
+    margin: 0;
+}
+
+.team-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 20px;
+}
+
+.team-img {
+    width: 700px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 
 /* 响应式设计 */
 @media screen and (max-width:700px){
@@ -437,4 +592,85 @@ img{
     .pictures-indicators{
         bottom:10px;
     }
+}
+
+/* 秘密花园弹窗中的图片样式 */
+.garden-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.garden-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 育苗基地弹窗中的图片样式 */
+.agriculture-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.agriculture-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 霖泽科技弹窗中的图片样式 */
+.linze-image {
+    text-align: center;
+    margin: 20px 0;
+    display: block;
+}
+
+.linze-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+/* 切尔西园艺弹窗中的图片样式 */
+.horticulture-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.horticulture-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 烈士展陈室弹窗中的图片样式 */
+.exhibition-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.exhibition-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 牧语多肉园弹窗中的图片样式 */
+.farm-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.farm-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

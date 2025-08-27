@@ -43,22 +43,29 @@ const content = document.querySelectorAll('.content');
 for(let i=0;i<btns.length;i++){
     btns[i].addEventListener("click",
         function(){
+            // 移除所有内容的active类
             content.forEach(content => content.classList.remove('active'));
-            var current = document.getElementsByClassName('active');
-            if(current.length>0){
-                current[0].className = current[0].className.replace(" active","");
-            }
-            this.className += " active";
-    
+            
+            // 获取目标内容ID
             const targetId = this.getAttribute('data-target');
             const targetContent = document.getElementById(targetId);
             const targetWindow  = document.getElementById('Wcontainer');
+            
+            // 调试信息
+            console.log("点击按钮，目标ID:", targetId);
+            console.log("目标内容元素:", targetContent);
+            
             if(targetContent){
-                // targetContent.className += " active";
+                // 激活目标内容
                 targetContent.classList.add('active');
+                console.log("内容已激活");
+            } else {
+                console.log("未找到目标内容");
             }
-            // console.log("helloworld");
-            targetWindow.className += " show";
+            
+            // 显示弹窗
+            targetWindow.classList.add('show');
+            console.log("弹窗已显示");
         }
     )
 }
